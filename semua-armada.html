@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semua Armada - KOMODO Transport</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* Tambahan gaya khusus halaman Semua Armada agar pas dengan tema */
+        .all-vehicles-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-top: 15px;
+        }
+
+        .vehicle-list-card {
+            background: #ffffff;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+            border: 1px solid #edf2f7;
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            gap: 15px;
+        }
+
+        .vehicle-list-card img {
+            width: 100px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+
+        .list-card-details {
+            flex-grow: 1;
+        }
+
+        .list-card-details h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #0b2545;
+        }
+
+        .list-card-details .price {
+            font-size: 0.85rem;
+            color: #0077b6;
+            font-weight: 700;
+            margin-top: 4px;
+        }
+
+        .btn-pesan-wa {
+            background-color: #25d366;
+            color: #fff;
+            font-size: 0.8rem;
+            font-weight: 600;
+            padding: 8px 14px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            white-space: nowrap;
+        }
+
+        .back-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 15px 20px;
+            background: #fff;
+            position: sticky;
+            top: 0;
+            z-index: 900;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .back-header a {
+            font-size: 1.1rem;
+            color: #0b2545;
+        }
+
+        .back-header h1 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: #0b2545;
+        }
+
+        .page-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        @media (min-width: 768px) {
+            .back-header, .page-container {
+                max-width: 450px !important;
+                border-radius: 24px;
+            }
+            .back-header {
+                margin-top: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="back-header">
+        <a href="index.html"><i class="fa-solid fa-arrow-left"></i></a>
+        <h1>Daftar Seluruh Armada VIP</h1>
+    </header>
+
+    <main class="page-container">
+        <div class="all-vehicles-grid">
+            
+            <div class="vehicle-list-card">
+                <img src="images/alphard.jpg" alt="Alphard">
+                <div class="list-card-details">
+                    <h3>Toyota Alphard VVIP</h3>
+                    <div class="price">Mulai Rp 2.500.000</div>
+                </div>
+                <a href="https://api.whatsapp.com/send?phone=6281234567890&text=Halo%20KOMODO%20Transport,%20saya%20ingin%20booking%20unit%20Alphard" target="_blank" class="btn-pesan-wa">
+                    <i class="fa-brands fa-whatsapp"></i> Pesan
+                </a>
+            </div>
+
+            <div class="vehicle-list-card">
+                <img src="images/fortuner.jpg" alt="Fortuner">
+                <div class="list-card-details">
+                    <h3>Toyota Fortuner GR</h3>
+                    <div class="price">Mulai Rp 2.000.000</div>
+                </div>
+                <a href="https://api.whatsapp.com/send?phone=6281234567890&text=Halo%20KOMODO%20Transport,%20saya%20ingin%20booking%20unit%20Fortuner" target="_blank" class="btn-pesan-wa">
+                    <i class="fa-brands fa-whatsapp"></i> Pesan
+                </a>
+            </div>
+
+            <div class="vehicle-list-card">
+                <img src="images/hiace.jpg" alt="Hiace Premio">
+                <div class="list-card-details">
+                    <h3>Toyota Hiace Premio</h3>
+                    <div class="price">Mulai Rp 1.800.000</div>
+                </div>
+                <a href="https://api.whatsapp.com/send?phone=6281234567890&text=Halo%20KOMODO%20Transport,%20saya%20ingin%20booking%20unit%20Hiace%20Premio" target="_blank" class="btn-pesan-wa">
+                    <i class="fa-brands fa-whatsapp"></i> Pesan
+                </a>
+            </div>
+
+            <div class="vehicle-list-card">
+                <img src="images/innova.jpg" alt="Innova Reborn">
+                <div class="list-card-details">
+                    <h3>Innova Reborn Facelift</h3>
+                    <div class="price">Mulai Rp 900.000</div>
+                </div>
+                <a href="https://api.whatsapp.com/send?phone=6281234567890&text=Halo%20KOMODO%20Transport,%20saya%20ingin%20booking%20unit%20Innova%20Reborn" target="_blank" class="btn-pesan-wa">
+                    <i class="fa-brands fa-whatsapp"></i> Pesan
+                </a>
+            </div>
+
+            <div class="vehicle-list-card">
+                <img src="images/bus.jpg" alt="Bus Pariwisata">
+                <div class="list-card-details">
+                    <h3>Bus Pariwisata Eksekutif</h3>
+                    <div class="price">Mulai Rp 3.500.000</div>
+                </div>
+                <a href="https://api.whatsapp.com/send?phone=6281234567890&text=Halo%20KOMODO%20Transport,%20saya%20ingin%20booking%20unit%20Bus%20Pariwisata" target="_blank" class="btn-pesan-wa">
+                    <i class="fa-brands fa-whatsapp"></i> Pesan
+                </a>
+            </div>
+
+        </div>
+    </main>
+
+</body>
+</html>

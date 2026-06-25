@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pusat Bantuan - KOMODO Transport</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* Gaya Tampilan Pusat Bantuan (App-Like Style) */
+        .back-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 15px 20px;
+            background: #fff;
+            position: sticky;
+            top: 0;
+            z-index: 900;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .back-header a {
+            font-size: 1.1rem;
+            color: #0b2545;
+        }
+
+        .back-header h1 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: #0b2545;
+        }
+
+        .page-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 24px 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .help-card {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 18px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+            border: 1px solid #edf2f7;
+        }
+
+        .help-card h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #0b2545;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 8px;
+        }
+
+        .help-card h3 i {
+            color: #0077b6;
+        }
+
+        .help-card p {
+            font-size: 0.85rem;
+            color: #555;
+            line-height: 1.4;
+        }
+
+        .help-contact-btn {
+            display: inline-block;
+            margin-top: 12px;
+            background-color: #e6f3fa;
+            color: #0077b6;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        @media (min-width: 768px) {
+            .back-header, .page-container {
+                max-width: 450px !important;
+                border-radius: 24px;
+            }
+            .back-header {
+                margin-top: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="back-header">
+        <a href="index.html"><i class="fa-solid fa-arrow-left"></i></a>
+        <h1>Pusat Bantuan & Ketentuan</h1>
+    </header>
+
+    <main class="page-container">
+        
+        <div class="help-card">
+            <h3><i class="fa-solid fa-file-contract"></i> Syarat & Ketentuan Sewa</h3>
+            <p>1. Harga sewa sudah termasuk bahan bakar (BBM) dan pengemudi (Driver).</p>
+            <p>2. Biaya belum termasuk tiket masuk destinasi wisata, tol, dan parkir.</p>
+            <p>3. Pembatalan pemesanan maksimal H-2 akan dikenakan biaya administrasi.</p>
+        </div>
+
+        <div class="help-card">
+            <h3><i class="fa-solid fa-shield-halved"></i> Kebijakan Privasi</h3>
+            <p>Data pribadi Anda (nama, nomor WhatsApp, jadwal sewa) yang dimasukkan pada sistem pemesanan dijamin kerahasiaannya dan hanya digunakan untuk keperluan operasional KOMODO Transport.</p>
+        </div>
+
+        <div class="help-card">
+            <h3><i class="fa-solid fa-headset"></i> Butuh Bantuan Darurat?</h3>
+            <p>Jika Anda mengalami kendala di perjalanan atau operasional, silakan hubungi tim kami yang bertugas 24 jam.</p>
+            <a href="https://wa.me/6281234567890" target="_blank" class="help-contact-btn"><i class="fa-brands fa-whatsapp"></i> Hubungi Tim Support</a>
+        </div>
+
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,609 @@
+/* RESET & PENGATURAN DASAR */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f4f6f9;
+    color: #333;
+    overflow-x: hidden;
+    padding-bottom: 90px; /* Ruang untuk sticky button di bawah */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* HEADER (Sederhana & Bersih) */
+.site-header {
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 900;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 600px; /* Dibatasi agar menyerupai lebar layar aplikasi mobile */
+    margin: 0 auto;
+    padding: 15px 20px;
+}
+
+.logo-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-img {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.logo-text {
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: #0b2545;
+}
+
+.logo-text span {
+    color: #0077b6;
+}
+
+/* Tombol Hamburger */
+.menu-btn {
+    background: none;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.menu-btn span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: #0b2545;
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+/* MENU SIDEBAR (Glassmorphism) */
+.menu-wrapper {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(5px);
+    z-index: 9999;
+    transition: left 0.4s ease;
+}
+
+.menu-wrapper.active {
+    left: 0;
+}
+
+.menu-sidebar {
+    width: 80%;
+    max-width: 360px;
+    height: 100%;
+    background: #ffffff;
+    box-shadow: 4px 0 25px rgba(0,0,0,0.15);
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #555;
+}
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex-grow: 1;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 12px 15px;
+    border-radius: 10px;
+    font-weight: 500;
+    color: #222;
+    transition: background-color 0.2s;
+}
+
+.nav-item i {
+    font-size: 1.1rem;
+    color: #0077b6;
+    width: 24px;
+}
+
+.nav-item:hover {
+    background-color: #f0f7fc;
+}
+
+.sidebar-footer {
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #444;
+}
+
+.footer-contact-title {
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #0b2545;
+}
+
+.sidebar-footer p {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 6px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.social-icons a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 36px;
+    height: 36px;
+    background-color: #f0f0f0;
+    border-radius: 50%;
+    color: #333;
+    transition: background 0.2s, color 0.2s;
+}
+
+.social-icons a:hover {
+    background-color: #0077b6;
+    color: #fff;
+}
+
+/* HERO SECTION */
+.hero-section {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    min-height: 580px;
+    color: #fff;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    border-bottom-left-radius: 24px;
+    border-bottom-right-radius: 24px;
+    overflow: hidden;
+}
+
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent 20%, rgba(5, 18, 36, 0.85) 80%);
+    z-index: 2;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.badge-tour {
+    display: inline-block;
+    background: rgba(255, 215, 0, 0.2);
+    border: 1px solid rgba(255, 215, 0, 0.4);
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    align-self: flex-start;
+    color: #ffd700;
+}
+
+.hero-content h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.hero-content p {
+    font-size: 0.95rem;
+    font-weight: 300;
+    color: #e0e0e0;
+    line-height: 1.4;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.btn-primary, .btn-secondary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 20px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: transform 0.2s;
+}
+
+.btn-primary {
+    background-color: #0077b6;
+    color: #ffffff;
+}
+
+.btn-secondary {
+    background-color: #ffffff;
+    color: #0b2545;
+}
+
+.btn-primary:active, .btn-secondary:active {
+    transform: scale(0.97);
+}
+
+/* APP STATS (Tampilan mirip aplikasi) */
+.app-stats {
+    display: flex;
+    justify-content: space-around;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    padding: 15px 10px;
+    margin-top: 15px;
+}
+
+.stat-item {
+    text-align: center;
+    color: #ffffff;
+}
+
+.stat-item i {
+    font-size: 1.1rem;
+    margin-bottom: 4px;
+    color: #ffd700;
+}
+
+.stat-num {
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.stat-label {
+    font-size: 0.75rem;
+    color: #ddd;
+}
+
+/* MAIN CONTENT CONTAINER */
+.main-content {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 24px 20px;
+}
+
+.content-section {
+    margin-bottom: 30px;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.section-header h2 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #0b2545;
+    letter-spacing: 0.5px;
+}
+
+.see-all {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #0077b6;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+/* Slider Card (Armada) */
+.card-slider {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    padding-bottom: 8px;
+}
+
+/* Scrollbar tersembunyi agar terlihat seperti App */
+.card-slider::-webkit-scrollbar {
+    display: none;
+}
+
+.vehicle-card {
+    flex: 0 0 180px;
+    background: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+    border: 1px solid #edf2f7;
+}
+
+.vehicle-card img {
+    width: 100%;
+    height: 110px;
+    object-fit: cover;
+}
+
+.card-details {
+    padding: 12px;
+}
+
+.card-details h3 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #0b2545;
+}
+
+.card-details .price {
+    font-size: 0.8rem;
+    color: #555;
+    margin-top: 4px;
+}
+
+/* Package Card */
+.package-card {
+    position: relative;
+    background: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.05);
+    border: 1px solid #edf2f7;
+}
+
+.badge-bestseller {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    background: #ff7b00;
+    color: #fff;
+    font-size: 0.65rem;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 30px;
+    z-index: 10;
+    letter-spacing: 0.5px;
+}
+
+.package-card > img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.package-body {
+    padding: 18px;
+}
+
+.package-body h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #0b2545;
+    margin-bottom: 4px;
+}
+
+.duration {
+    font-size: 0.85rem;
+    color: #666;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.package-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid #f0f0f0;
+}
+
+.label-mulai {
+    font-size: 0.75rem;
+    color: #777;
+    display: block;
+}
+
+.price-value {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #0077b6;
+}
+
+.price-value span {
+    font-size: 0.75rem;
+    font-weight: 400;
+    color: #666;
+}
+
+.btn-booking-card {
+    background-color: #e6f3fa;
+    color: #0077b6;
+    padding: 10px 14px;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* FLOATING WHATSAPP BUTTON */
+.floating-wa {
+    position: fixed;
+    bottom: 95px;
+    right: 25px;
+    width: 55px;
+    height: 55px;
+    background-color: #25d366;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 1.8rem;
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+    z-index: 800;
+    transition: transform 0.2s;
+}
+
+.floating-wa:active {
+    transform: scale(0.9);
+}
+
+/* STICKY BOTTOM BOOKING BUTTON */
+.sticky-booking {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #ffffff;
+    box-shadow: 0 -4px 15px rgba(0,0,0,0.08);
+    padding: 12px 20px;
+    z-index: 850;
+}
+
+.sticky-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #0077b6;
+    color: #ffffff;
+    padding: 12px 16px;
+    border-radius: 16px;
+}
+
+.sticky-icon {
+    background: rgba(255,255,255,0.2);
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+.sticky-text {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.95rem;
+}
+
+.sticky-text span {
+    font-size: 0.75rem;
+    color: #e0f3ff;
+    margin-top: 2px;
+}
+
+.sticky-arrow {
+    font-size: 1.1rem;
+}
+
+/* RESPONSIVE UNTUK DESKTOP (Tampilan Multi-Fungsi) 
+   Teknik ini memastikan saat di laptop/desktop, website akan berada di tengah dengan ukuran khas aplikasi mobile, 
+   sehingga estetika dan kerapian aplikasi tetap terjaga, mirip seperti sistem Traveloka.
+*/
+@media (min-width: 768px) {
+    body {
+        background-color: #eaeef2;
+        /* Wallpaper atau latar belakang desktop bisa ditambahkan di sini */
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    
+    .site-header, .header-container, .hero-section, .main-content, .sticky-btn {
+        max-width: 450px !important; /* Batasi lebar agar benar-benar menyerupai bentuk perangkat hp/android */
+        border-radius: 24px;
+    }
+    
+    .site-header {
+        margin-top: 20px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+
+    .hero-section {
+        min-height: 520px;
+    }
+    
+    .menu-sidebar {
+        max-width: 420px;
+    }
+
+    .floating-wa {
+        right: calc(50% - 200px); /* Menyesuaikan agar tetap berada di sudut kanan mockup mobile */
+    }
+}
