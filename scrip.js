@@ -1,41 +1,21 @@
-// Tunggu sampai seluruh dokumen selesai dimuat
 document.addEventListener("DOMContentLoaded", function() {
-    
-    // Ambil elemen tombol dan menu wrapper
     const menuBtn = document.getElementById("menuBtn");
     const menuWrapper = document.getElementById("menuWrapper");
     const closeMenu = document.getElementById("closeMenu");
 
-    // Fungsi untuk membuka menu samping
     function bukaMenu() {
-        if (menuWrapper) {
-            menuWrapper.classList.add("active");
+        if (menuWrapper) menuWrapper.classList.add("active");
         }
-    }
-
-    // Fungsi untuk menutup menu samping
     function tutupMenu() {
-        if (menuWrapper) {
-            menuWrapper.classList.remove("active");
+        if (menuWrapper) menuWrapper.classList.remove("active");
         }
-    }
-
-    // 1. Event listener untuk tombol hamburger (garis 3)
-    if (menuBtn) {
-        menuBtn.addEventListener("click", bukaMenu);
-    }
-
-    // 2. Event listener untuk tombol 'X' (tutup menu) di dalam sidebar
-    if (closeMenu) {
-        closeMenu.addEventListener("click", tutupMenu);
-    }
-
-    // 3. Menutup menu jika klien mengklik area gelap di luar sidebar
+    if (menuBtn) menuBtn.addEventListener("click", bukaMenu);
+    if (closeMenu) closeMenu.addEventListener("click", tutupMenu);
+    
     if (menuWrapper) {
         menuWrapper.addEventListener("click", function(e) {
-            if (e.target === menuWrapper) {
-                tutupMenu();
-            }
+            if (e.target === menuWrapper) tutupMenu();
+            
         });
     }
 
